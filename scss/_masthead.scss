@@ -2,11 +2,12 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/about/aria.tif');
+  background-image: url('../img/about/citySkyline.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  animation: shrink 5s infinite alternate;
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
@@ -24,6 +25,14 @@ header.masthead {
       margin-bottom: 25px;
       @include heading-font;
     }
+  }
+}
+@keyframes shrink {
+  0% {
+    background-size: 110% 110%;
+  }
+  100% {
+    background-size: 100% 100%;
   }
 }
 @media(min-width:768px) {
